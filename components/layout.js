@@ -1,5 +1,6 @@
 import Link from 'next/link';
 import { useRouter } from 'next/router';
+import Footer from './Footer';
 
 export default function Layout({ children }) {
   const router = useRouter();
@@ -25,7 +26,7 @@ export default function Layout({ children }) {
         💎 Next.js Fullscreen
       </header>
       <div className="flex flex-col md:flex-row flex-1">
-        <aside className="bg-emerald-100 w-full md:w-60">
+        <aside className="hidden md:block bg-emerald-100 w-full md:w-60">
           <nav>
             <ul>
               {menuItems.map(({ href, title }) => (
@@ -44,8 +45,9 @@ export default function Layout({ children }) {
             </ul>
           </nav>
         </aside>
-        <main className="flex-1">{children}</main>
+        <main className="flex-1 p-4">{children}</main>
       </div>
+        <Footer></Footer>
     </div>
   );
 }
