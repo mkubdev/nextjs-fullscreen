@@ -11,7 +11,10 @@ const Line = () => {
       el: document.getElementById("myholder"),
       model: graph,
       width: "100%",
-      height: "100%", // calc(100vh - (headHeight + footerHeight))
+
+      // calc( -(headerSize + footerSize + mainMargin) + 100vh )
+      // headerSize = 56px / footersize = 48px / mainMargin = 32px
+      height: "calc(-140px + 100vh)",
       gridSize: 1,
       cellViewNamespace: namespace,
     });

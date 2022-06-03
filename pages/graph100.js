@@ -42,7 +42,10 @@ const Line = () => {
   });
 
   return (
+    <div className="h-full m-4">
+
     <div id="myholder" className="border-2 overflow-hidden rounded-xl"></div>
+    </div>
   );
 };
 

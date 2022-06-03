@@ -1,22 +1,30 @@
-import Link from 'next/link';
-import { useRouter } from 'next/router';
-import Footer from './Footer';
+import Link from "next/link";
+import { useRouter } from "next/router";
+import Footer from "./Footer";
 
 export default function Layout({ children }) {
   const router = useRouter();
 
   const menuItems = [
     {
-      href: '/',
-      title: 'Homepage',
+      href: "/",
+      title: "Homepage",
     },
     {
-      href: '/about',
-      title: 'About',
+      href: "/about",
+      title: "About",
     },
     {
-      href: '/contact',
-      title: 'Contact',
+      href: "/contact",
+      title: "Contact",
+    },
+    {
+      href: "/graph100",
+      title: "Graph 100%",
+    },
+    {
+      href: "/graph",
+      title: "Graph calc()",
     },
   ];
 
@@ -34,7 +42,7 @@ export default function Layout({ children }) {
                   <Link href={href}>
                     <a
                       className={`flex p-2 bg-emerald-200 rounded hover:bg-emerald-400 cursor-pointer ${
-                        router.asPath === href && 'bg-emerald-600 text-white'
+                        router.asPath === href && "bg-emerald-600 text-white"
                       }`}
                     >
                       {title}
@@ -45,9 +53,9 @@ export default function Layout({ children }) {
             </ul>
           </nav>
         </aside>
-        <main className="flex-1 p-4">{children}</main>
+        <main className="flex-1">{children}</main>
       </div>
-        <Footer></Footer>
+      <Footer></Footer>
     </div>
   );
 }
