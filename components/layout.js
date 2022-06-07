@@ -1,30 +1,30 @@
-import Link from "next/link";
-import { useRouter } from "next/router";
-import Footer from "./Footer";
+import Link from 'next/link';
+import { useRouter } from 'next/router';
+import Footer from './Footer';
 
 export default function Layout({ children }) {
   const router = useRouter();
 
   const menuItems = [
     {
-      href: "/",
-      title: "Homepage",
+      href: '/',
+      title: 'Homepage',
     },
     {
-      href: "/about",
-      title: "About",
+      href: '/about',
+      title: 'About',
     },
     {
-      href: "/contact",
-      title: "Contact",
+      href: '/contact',
+      title: 'Contact',
     },
     {
-      href: "/graph100",
-      title: "Graph 100%",
+      href: '/graph100',
+      title: 'Graph 100%',
     },
     {
-      href: "/graph",
-      title: "Graph calc()",
+      href: '/graph',
+      title: 'Graph calc()',
     },
   ];
 
@@ -33,7 +33,7 @@ export default function Layout({ children }) {
       <header className="bg-emerald-200 sticky top-0 h-14 flex justify-center items-center font-semibold uppercase">
         💎 Next.js Fullscreen
       </header>
-      <div className="flex flex-col md:flex-row flex-1">
+      <div className="flex md:flex-row flex-1">
         <aside className="hidden md:block bg-emerald-100 w-full md:w-60">
           <nav>
             <ul>
@@ -42,7 +42,7 @@ export default function Layout({ children }) {
                   <Link href={href}>
                     <a
                       className={`flex p-2 bg-emerald-200 rounded hover:bg-emerald-400 cursor-pointer ${
-                        router.asPath === href && "bg-emerald-600 text-white"
+                        router.asPath === href && 'bg-emerald-600 text-white'
                       }`}
                     >
                       {title}
