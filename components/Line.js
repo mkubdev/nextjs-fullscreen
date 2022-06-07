@@ -1,5 +1,5 @@
-import React, { useState, useEffect } from "react";
-import * as joint from "jointjs";
+import React, { useState, useEffect } from 'react';
+import * as joint from 'jointjs';
 
 const Line = () => {
   useEffect(() => {
@@ -8,10 +8,10 @@ const Line = () => {
     var graph = new joint.dia.Graph({}, { cellNamespace: namespace });
 
     var paper = new joint.dia.Paper({
-      el: document.getElementById("myholder"),
+      el: document.getElementById('myholder'),
       model: graph,
-      width: "100%",
-      height: "100%", // calc(100vh - (headHeight + footerHeight))
+      width: '100%',
+      height: '100%', // calc(100vh - (headHeight + footerHeight))
       gridSize: 1,
       cellViewNamespace: namespace,
     });
@@ -21,18 +21,18 @@ const Line = () => {
     rect.resize(100, 40);
     rect.attr({
       body: {
-        fill: "blue",
+        fill: '#059669',
       },
       label: {
-        text: "Hello",
-        fill: "white",
+        text: 'Hello',
+        fill: 'white',
       },
     });
     rect.addTo(graph);
 
     var rect2 = rect.clone();
     rect2.translate(300, 0);
-    rect2.attr("label/text", "World!");
+    rect2.attr('label/text', 'World!');
     rect2.addTo(graph);
 
     var link = new joint.shapes.standard.Link();
